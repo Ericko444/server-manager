@@ -1,5 +1,6 @@
 package mg.projets.servermanager.services;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import mg.projets.servermanager.models.Server;
@@ -14,4 +15,6 @@ public interface ServerService {
     Server update(Server server);
 
     Boolean delete(Long id);
+
+    Server ping(String ipAddress) throws IOException;
 }
